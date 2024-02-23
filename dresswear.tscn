@@ -19,8 +19,13 @@ position = Vector2(50, 20)
 shape = SubResource("RectangleShape2D_18w5y")
 
 [node name="Ahh" type="Sprite2D" parent="."]
-position = Vector2(49.5, 20.125)
-scale = Vector2(0.161765, 0.099375)
+position = Vector2(81, 20)
+scale = Vector2(0.0637255, 0.099375)
+texture = ExtResource("2_ibmmv")
+
+[node name="Ahh" type="Sprite2D" parent="Ahh"]
+position = Vector2(-564.923, 90.5661)
+scale = Vector2(1.90781, 0.426732)
 texture = ExtResource("2_ibmmv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1sleejil11ee"]
+[gd_scene load_steps=4 format=3 uid="uid://c1sleejil11ee"]
 
 [ext_resource type="Script" path="res://proket.gd" id="1_wrqui"]
+[ext_resource type="PackedScene" uid="uid://biw6mb1qcca7k" path="res://cat.tscn" id="2_cynaj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjekf"]
 
@@ -14,3 +15,7 @@ offset_bottom = 20.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_xjekf")
+
+[node name="Node2D" parent="." instance=ExtResource("2_cynaj")]
+position = Vector2(5.96046e-08, 5.96046e-08)
+scale = Vector2(0.04, 0.04)

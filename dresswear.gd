@@ -10,4 +10,5 @@ func _on_body_entered(body):
 			body.ySpeed *= -1
 		else:
 			body.xSpeed *= -1
+		get_parent().update_score()
 		self.queue_free()

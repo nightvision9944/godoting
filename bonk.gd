@@ -1,4 +1,6 @@
 extends Node2D
+var score = 0.0
+
 
 var block = load("res://dresswear.tscn")
 # Called when the node enters the scene tree for the first time.
@@ -13,3 +15,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+func update_score():
+	score += 1
+	$winnings.text = "Score: " + str(score)

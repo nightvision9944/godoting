@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://0qw5fy7tvxyd"]
+
+[ext_resource type="Script" path="res://dresswear.gd" id="1_4ukpe"]
+[ext_resource type="Texture2D" uid="uid://cpnoitk23x7x" path="res://ahh.jpg" id="2_ibmmv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18w5y"]
+size = Vector2(100, 40)
+
+[node name="dresswear" type="Area2D"]
+script = ExtResource("1_4ukpe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 100.0
+offset_bottom = 40.0
+color = Color(0.65098, 0.219608, 0.364706, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(50, 20)
+shape = SubResource("RectangleShape2D_18w5y")
+
+[node name="Ahh" type="Sprite2D" parent="."]
+position = Vector2(49.5, 20.125)
+scale = Vector2(0.161765, 0.099375)
+texture = ExtResource("2_ibmmv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
